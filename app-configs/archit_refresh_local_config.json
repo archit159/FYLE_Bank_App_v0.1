@@ -1,0 +1,112 @@
+{
+    "database": {
+      "url": {
+        "drivername": "mysql",
+        "host": "localhost",
+        "port": "3306",
+        "username": "root",
+        "password": "4feb1994",
+        "database": "alfred_local"
+      },
+      "flavor": "mysql",
+      "db_schema": null,
+      "table_names": {
+        "payer": "payer_data",
+        "sales": "sales_data",
+        "competitor": "competitor",
+        "terr_level": "terr_level",
+        "div_level": "div_level",
+        "comp_terr_level": "comp_terr_level",
+        "refresh_check": "refresh_check",
+        "roster": "roster",
+        "user_consent": "user_consent",
+        "terr_selection": "terr_selection",
+        "div_terr_mapping": "div_terr_mapping"
+      },
+      "sales_patients_columns":["Customer ID","Customer Name","Customer Address","Customer City","Customer State","Customer Zip","Organization ID","Organization Name","Organization Address","Organization City", "Organization State","Organization Zip","Region Name", "Region Number", "Division Name", "Division Number","Territory Name", "Territory Number", "Brand Name", "PDRP_Flag"],
+      "terr_roll_up_columns":["Region Name","Region Number","Division Name","Division Number","Territory Name","Territory Number","Brand Name","Team Name"],
+      "payer_columns":["MDM ID","First Name","Last Name","Address","City","State","Region Name","Division Name","Division Number","Territory Name","Territory Number","PDRP_Flag","Parent Name","Plan Name", "IMS_Payer_type", "Region Number", "Product Description", "TQty", "Total_Patients"],
+      "alerts_timezone": "America/Los_Angeles",
+      "team_codes": {
+        "ritra": {
+          "sales_data_file_tag": "Ritra Monthly Sales.csv",
+          "competitor_data_file_tag": "Ritra Monthly Patients.csv",
+          "payer_data_file_tag": "Ritra Monthly Payer.csv",
+          "terr_rollup_sales": "Ritra Sales Territory Roll-up.csv",
+          "terr_rollup_patients": "Ritra Patients Territory Roll-up.csv"
+        },
+        "fran": {
+          "sales_data_file_tag": "Fran Monthly Sales.csv",
+          "competitor_data_file_tag": "Fran Monthly Patients.csv",
+          "payer_data_file_tag": "Fran Monthly Payer.csv",
+          "terr_rollup_sales": "Fran Sales Territory Roll-up.csv",
+          "terr_rollup_patients": "Fran Patients Territory Roll-up.csv"
+        },
+        "act": {
+          "sales_data_file_tag": "Act Monthly Sales.csv",
+          "competitor_data_file_tag": "Act Monthly Patients.csv",
+          "payer_data_file_tag": "Act Monthly Payer.csv",
+          "terr_rollup_sales": "Act Sales Territory Roll-up.csv",
+          "terr_rollup_patients": "Act Patients Territory Roll-up.csv"
+        }
+      },
+      "sales_team_code_brand_mapping": {
+              "RITRA": ["RTX IMM DOM", "RTX MIXED"],
+              "ACT":  ["ACT IV", "ACT SC", "ACT TOTAL"],
+              "FRAN": ["ACT IV", "ACT SC", "ACT TOTAL", "RTX IMM DOM", "RTX MIXED"]
+      },
+      "comp_brand_qc":{
+        "RITRA": ["ACT IV", "RTX IMM", "CIM IV", "INFLECTRA", "ORN IV", "REM", "SIM IV"],
+        "ACT": ["ACT IV", "RTX", "CIM IV", "INFLECTRA", "ORN IV", "REM", "SIM IV","ACT SC", "CIM SC", "ENB", "HUM", "KEV", "ORN SC", "SIM SC", "XEL"],
+        "FRAN": ["ACT IV", "RTX IMM", "CIM IV", "INFLECTRA", "ORN IV", "REM", "SIM IV", "ACT SC", "CIM SC", "ENB", "HUM", "KEV", "ORN SC", "SIM SC", "XEL", "ACT IV", "RTX IMM", "CIM IV", "INFLECTRA", "ORN IV", "REM", "SIM IV"]
+      },
+      "competitor_team_code_brand_mapping": {
+          "RITRA": {"RTX IMM DOM": ["ACT IV", "RTX IMM", "CIM IV", "INFLECTRA", "ORN IV", "REM", "SIM IV"]},
+          "ACT": {
+              "ACT IV": ["ACT IV", "RTX", "CIM IV", "INFLECTRA", "ORN IV", "REM", "SIM IV"],
+              "ACT SC": ["ACT SC", "CIM SC", "ENB", "HUM", "KEV", "ORN SC", "SIM SC", "XEL"]
+          },
+          "FRAN": {
+              "RTX IMM DOM": [
+                  "ACT IV",
+                  "RTX IMM",
+                  "CIM IV",
+                  "INFLECTRA",
+                  "ORN IV",
+                  "REM",
+                  "SIM IV"
+              ],
+              "ACT SC": ["ACT SC", "CIM SC", "ENB", "HUM", "KEV", "ORN SC", "SIM SC", "XEL"],
+              "ACT IV": ["ACT IV", "RTX IMM", "CIM IV", "INFLECTRA", "ORN IV", "REM", "SIM IV"]
+
+          }
+      },
+      "team_code_team_mapping": {
+                "RITRA": "RICS",
+                "ACT": "AICS",
+                "FRAN": "ICS"
+      },
+      "terr_level_sales_data_file_tag": "Sales Territory Roll-up.csv",
+      "terr_level_comp_data_file_tag": "Patients Territory Roll-up.csv"
+    },
+  "files": {
+    "mount_location": {
+      "roster_dir": "C:/Users/archi/Documents/Alfred/Data/Mount/",
+      "input_data_dir": "C:/Users/archi/Documents/Alfred/Data/Mount/",
+      "verified_data_dir": "C:/Users/archi/Documents/Alfred/Data/Verified/Data/",
+      "input_roster_csv": "C:/Users/archi/Documents/Alfred/Data/Mount/Roster RA Alfred.csv",
+      "verified_roster_csv": "C:/Users/archi/Documents/Alfred/Data/Verified/verified_roster.csv"
+    },
+    "local_location": {
+      "roster_dir": "C:/Users/archi/Documents/Alfred/Data/Local/",
+      "archive_dir": "C:/Users/archi/Documents/Alfred/Data/Local/Archives/",
+      "data_dir": "C:/Users/archi/Documents/Alfred/Data/Local/Data/",
+      "staging_dir": "C:/Users/archi/Documents/Alfred/Data/Local/staging-data/",
+      "roster_staging_csv": "C:/Users/archi/Documents/Alfred/Data/Local/roster_staging.csv",
+      "roster_csv": "C:/Users/archi/Documents/Alfred/Data/Local/roster/roster.csv",
+      "user_consent_tsv": "C:/Users/archi/Documents/Alfred/Data/Local/roster/user_consent.tsv",
+      "log_dir": "C:/Users/archi/Documents/Alfred/Data/Local/logs/",
+      "data_refresh_json": "C:/Users/archi/Documents/Alfred/alfred/app-configs/sld_data_refresh_dates.json"
+    }
+  }
+}
