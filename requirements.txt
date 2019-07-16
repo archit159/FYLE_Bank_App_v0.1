@@ -4,6 +4,7 @@ future==0.16.0
 Jinja2==2.10
 numpy==1.14.2
 pandas==0.22.0
+psycopg2
 PyJWT==1.6.1
 python-dateutil==2.6.1
 requests==2.18.4
