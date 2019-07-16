@@ -1,4 +1,5 @@
 from flask import Flask
+from flask_jwt_extended import JWTManager
 import os, sys, json
 import logging, logging.handlers
 from sqlalchemy.engine.url import URL
@@ -11,6 +12,9 @@ application = Flask(__name__)
 application.config['SQLALCHEMY_DATABASE_URI'] = URL(**Config['database']['url'])
 application.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 application.config['SECRET_KEY'] = Config['secret_key']
+application.config['JWT_SECRET_KEY'] = Config['secret_key']
 application.config['SQLALCHEMY_POOL_RECYCLE'] = Config['database']['net_read_timeout']
+
+jwt = JWTManager(application)
 
 from application import views
