@@ -1,0 +1,15 @@
+{
+    "secret_key": "alfred for ra",
+    "database": {
+      "url": {
+        "drivername": "postgres",
+        "host": "localhost",
+        "port": "5432",
+        "username": "postgres",
+        "password": "4feb1994",
+        "database": "fyle"
+      },
+      "flavor": "postgres",
+      "net_read_timeout": 20
+}
+}
